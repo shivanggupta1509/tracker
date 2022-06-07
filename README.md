@@ -22,6 +22,18 @@ It will automatically refresh when another victim click on the link and allow th
 To make this two job done you have to know some social engineering.
 
 
+
+How to extract location:-
+
+You will get latitude and longitude in 420.txt
+
+you can search it on google map on search box
+
+search like this:- lat,long
+
+
+
+
 I'm script kidde😅 
 Don't expect high from me😁...
 I'm also weak on English. so don't troll me🤧
